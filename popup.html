@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Alert Popup</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Alert Modal -->
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertModalLabel"><img src="assets/logo.png" class="image-responsive"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/alert.png">
+        <h6>itsme Security Alert</h6>
+        <p> This is an important alert message for the application. Please take appropriate action.</p>
+        <button type="button" class="btn btn-primary"><a href="https://www.google.com/" target="_blank">Take Action</a></button>
+      </div>
+     <!--  <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Take Action</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (Optional) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Function to show the alert modal after 5 seconds
+  $(document).ready(function(){
+    setTimeout(function(){
+      $('#alertModal').modal('show');
+    }, 3000); // 5000 milliseconds = 5 seconds
+  });
+</script>
+<style type="text/css">
+   .image-responsive
+   {
+    width: 100%;
+    max-width: 60px;
+   }
+   .modal-body img
+   {
+    width: 100%;
+  max-width: 100px;
+   }
+   .modal-body h6
+   {
+    font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #fd450d;
+   }
+   .btn-primary
+   {
+    border-radius: 30px;
+  width: 100%;
+  max-width: 350px;
+  font-weight: bold;
+   }
+   .btn-primary a  
+   {
+    color: #fff;
+    text-decoration: none;
+   }
+</style>
+
+</body>
+</html>
